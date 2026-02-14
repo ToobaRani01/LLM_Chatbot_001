@@ -8,16 +8,18 @@ The following diagram illustrates the flow of a message through the system:
 
 ```mermaid
 graph TD
-    A["User Input"] --> B["Web Frontend (templates/index.html)"]
-    B -->| "POST /chat" | C["Flask Server (app.py)"]
-    C --> D["LangChain ConversationChain (llm_config.py)"]
-    D --> E["Conversation Memory (ConversationBufferMemory)"]
-    D --> F["Groq API (ChatOpenAI model)"]
-    F -->| "Response" | D
-    D -->| "AI Reply" | C
-    C -->| "JSON Response" | B
-    B --> G["Display AI Message"]
+    A["User Input"] --> B["Web Frontend"]
+    B -->|POST_Request| C["Flask Server"]
+    C --> D["LLM Configuration"]
+    D --> E["Conversation Memory"]
+    D --> F["Groq API"]
+    F -->|AI_Response| D
+    D -->|AI_Reply| C
+    C -->|JSON_Response| B
+    B --> G["Display Reply"]
 ```
+
+
 
 1.  **User Input**: User types a message in the chat interface.
 2.  **Flask Route**: The frontend sends the message to the `/chat` endpoint.
