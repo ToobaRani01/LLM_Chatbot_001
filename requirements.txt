@@ -1,0 +1,6 @@
+flask
+python-dotenv
+requests
+ipykernel
+langchain-community==0.3.10
+langchain-openai==0.3.10
