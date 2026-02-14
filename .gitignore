@@ -1,0 +1,15 @@
+# Sensitive information
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+
+# Virtual environment (optional, but good practice)
+venv/
+env/
+.venv/
