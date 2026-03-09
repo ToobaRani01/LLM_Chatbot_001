@@ -3,8 +3,8 @@
 import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationChain
+from langchain_classic.memory import ConversationBufferMemory
+from langchain_classic.chains import ConversationChain
 # remove warnings 
 import warnings
 warnings.filterwarnings("ignore")
