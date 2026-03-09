@@ -3,8 +3,6 @@
 import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain_classic.memory import ConversationBufferMemory
-from langchain_classic.chains import ConversationChain
 # remove warnings 
 import warnings
 warnings.filterwarnings("ignore")
@@ -26,12 +24,3 @@ llm = ChatOpenAI(
     temperature = 0.3,
 )
 
-# Set up conversation memory and chain
-memory = ConversationBufferMemory()
-
-
-coversation = ConversationChain(
-    llm = llm, 
-    memory = memory,
-    verbose = False
-)
